@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Find and Replace Tool</h1>
+  <div class="form-group">
+    <label for="textInput">Enter your text:</label>
+    <textarea
+      id="textInput"
+      class="text-area"
+      [(ngModel)]="text"
+      placeholder="Type your text here..."
+    ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="findInput">Find:</label>
+    <textarea
+      id="findInput"
+      class="input-box"
+      type="text"
+      [(ngModel)]="findWord"
+      placeholder="Word to find"
+    >
+    </textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="replaceInput">Replace:</label>
+    <textarea
+      id="replaceInput"
+      class="input-box"
+      type="text"
+      [(ngModel)]="replaceWord"
+      placeholder="Word to replace with"
+    >
+    </textarea>
+  </div>
+<p> this is working</p>
+  <button class="primary-button" (click)="replaceText()">Replace</button>
+
+  <h2>Replaced Text</h2>
+  <div class="output">
+    {{ replacedText }}
+  </div>
+</div>
